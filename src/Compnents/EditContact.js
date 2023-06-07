@@ -43,7 +43,7 @@ const navigate=useNavigate();
     },
     onSubmit: async (values) => {
       try {
-        const editput= axios.put(`http://localhost:9000/user-edit/${contactId}`,values)
+        const editput= axios.put(`https://contact-manager-backend-phlc.onrender.com/user-edit/${contactId}`,values)
         navigate("/contactlist")
 
       } catch (error) {

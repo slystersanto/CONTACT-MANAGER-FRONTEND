@@ -15,7 +15,7 @@ const AddContact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const response = await axios.post('http://localhost:9000/user-create', {
+      const response = await axios.post('https://contact-manager-backend-phlc.onrender.com/user-create', {
        id,
        name,
         photo,

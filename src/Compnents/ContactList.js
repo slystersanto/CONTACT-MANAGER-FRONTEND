@@ -9,7 +9,7 @@ const ContactList = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   let getUsers = async () => {
-    const users = await axios.get("http://localhost:9000/users");
+    const users = await axios.get("https://contact-manager-backend-phlc.onrender.com/users");
     setUserlist(users.data);
   };
 

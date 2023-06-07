@@ -10,7 +10,7 @@ const ViewContact = () => {
   useEffect(()=>{
     const viewcontact= async ()=>{
       try {
-        const view=await axios.get(`http://localhost:9000/user-view/${contactId}`)
+        const view=await axios.get(`https://contact-manager-backend-phlc.onrender.com/user-view/${contactId}`)
         setContact(view.data);
         console.log(view)
     } catch (error) {
