@@ -55,7 +55,7 @@ const navigate=useNavigate();
   useEffect(()=>{
     const editcontact= async ()=>{
       try {
-        const view=await axios.get(`http://localhost:9000/user-edit/${contactId}`)
+        const view=await axios.get(`https://contact-manager-backend-phlc.onrender.com/user-edit/${contactId}`)
       formik.setValues({
         name:view.data.name,
         photo:view.data.photo,

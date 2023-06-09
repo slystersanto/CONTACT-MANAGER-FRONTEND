@@ -7,6 +7,8 @@ import AddContact from './Compnents/AddContact';
 import EditContact from './Compnents/EditContact';
 import ViewContact from './Compnents/ViewContact';
 import Spinner from './Compnents/Spinner';
+import Login from './Compnents/Login';
+import Register from './Compnents/Register';
 
 const App = () => {
   return (
@@ -14,13 +16,15 @@ const App = () => {
      
       <Navbar />
       <Routes>
-        <Route path={"/"} element={<Navigate to={"/contactlist"}/>}/>
-        <Route path={"/contactlist"} element={<ContactList />} />
-        <Route path={"/addcontact"} element={<AddContact />} />
-        <Route path={"/viewcontact/:contactId"} element={<ViewContact />} />
-        <Route path={"/editcontact/:contactId"} element={<EditContact />} />
+  <Route path={"/"} element={<Navigate to={"/login"}/>}/>
+  <Route path={"/contactlist"} element={<ContactList />} />
+  <Route path={"/addcontact"} element={<AddContact />} />
+  <Route path={"/viewcontact/:contactId"} element={<ViewContact />} />
+  <Route path={"/editcontact/:contactId"} element={<EditContact />} />
+  <Route path={"/login"} element={<Login />} />
+  <Route path={"/register"} element={<Register />} />
+</Routes>
 
-      </Routes>
 
     </React.Fragment>
   );
