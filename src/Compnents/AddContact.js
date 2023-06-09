@@ -28,7 +28,7 @@ const AddContact = () => {
         },
         {
           headers: {
-            Authorization: `${window.localStorage.getItem('token')}`
+            Authorization: `${localStorage.getItem('token')}`
           }
         }
       );

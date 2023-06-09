@@ -45,8 +45,8 @@ const navigate=useNavigate();
       try {
         const editput= axios.put(`https://contact-manager-backend-phlc.onrender.com/user-edit/${contactId}`,values,{
           headers:{
-            Authorization:`${window.localStorage.getItem("token")}`
-          }
+            Authorization:`${localStorage.getItem("token")}`
+          },
         });
         navigate("/contactlist")
 

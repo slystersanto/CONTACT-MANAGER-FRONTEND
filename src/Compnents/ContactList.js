@@ -12,8 +12,8 @@ const ContactList = () => {
     try {
       const response = await axios.get("https://contact-manager-backend-phlc.onrender.com/users", {
         headers: {
-          Authorization: `${window.localStorage.getItem("token")}`
-        }
+          Authorization: `${localStorage.getItem("token")}`
+        },
       });
       setUserlist(response.data);
     } catch (error) {
@@ -30,7 +30,7 @@ const ContactList = () => {
       setLoading(true);
       await axios.delete(`https://contact-manager-backend-phlc.onrender.com/user-delete/${contactid}`, {
         headers: {
-          Authorization: `${window.localStorage.getItem("token")}`
+          Authorization: `${localStorage.getItem("token")}`
         }
       });
       const updatedUserList = userList.filter(user => user.id !== contactid);
