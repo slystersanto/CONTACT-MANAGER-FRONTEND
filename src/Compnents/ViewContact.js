@@ -10,7 +10,11 @@ const ViewContact = () => {
   useEffect(()=>{
     const viewcontact= async ()=>{
       try {
-        const view=await axios.get(`https://contact-manager-backend-phlc.onrender.com/user-view/${contactId}`)
+        const view=await axios.get(`https://contact-manager-backend-phlc.onrender.com/user-view/${contactId}`,{
+          headers:{
+            Authorization:`${window.localStorage.getItem("token")}`
+          }
+        });
         setContact(view.data);
         console.log(view)
     } catch (error) {

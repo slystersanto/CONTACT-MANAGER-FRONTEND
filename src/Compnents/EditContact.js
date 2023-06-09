@@ -43,7 +43,11 @@ const navigate=useNavigate();
     },
     onSubmit: async (values) => {
       try {
-        const editput= axios.put(`https://contact-manager-backend-phlc.onrender.com/user-edit/${contactId}`,values)
+        const editput= axios.put(`https://contact-manager-backend-phlc.onrender.com/user-edit/${contactId}`,values,{
+          headers:{
+            Authorization:`${window.localStorage.getItem("token")}`
+          }
+        });
         navigate("/contactlist")
 
       } catch (error) {
@@ -55,7 +59,11 @@ const navigate=useNavigate();
   useEffect(()=>{
     const editcontact= async ()=>{
       try {
-        const view=await axios.get(`https://contact-manager-backend-phlc.onrender.com/user-edit/${contactId}`)
+        const view=await axios.get(`https://contact-manager-backend-phlc.onrender.com/user-edit/${contactId}`,{
+          headers:{
+            Authorization:`${window.localStorage.getItem("token")}`
+          }
+        });
       formik.setValues({
         name:view.data.name,
         photo:view.data.photo,
