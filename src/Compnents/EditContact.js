@@ -45,9 +45,9 @@ const navigate=useNavigate();
       try {
         const editput= axios.put(`https://contact-manager-backend-phlc.onrender.com/user-edit/${contactId}`,values,{
           headers:{
-            Authorization:`${localStorage.getItem("token")}`
+            Authorization:`${localStorage.getItem("token")}`,
           },
-        });
+        })
         navigate("/contactlist")
 
       } catch (error) {
@@ -61,9 +61,9 @@ const navigate=useNavigate();
       try {
         const view=await axios.get(`https://contact-manager-backend-phlc.onrender.com/user-edit/${contactId}`,{
           headers:{
-            Authorization:`${window.localStorage.getItem("token")}`
-          }
-        });
+            Authorization:`${localStorage.getItem("token")}`,
+          },
+        })
       formik.setValues({
         name:view.data.name,
         photo:view.data.photo,

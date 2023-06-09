@@ -12,9 +12,9 @@ const ViewContact = () => {
       try {
         const view=await axios.get(`https://contact-manager-backend-phlc.onrender.com/user-view/${contactId}`,{
           headers:{
-            Authorization:`${localStorage.getItem("token")}`
+            Authorization:`${localStorage.getItem("token")}`,
           },
-        });
+        })
         setContact(view.data);
         console.log(view)
     } catch (error) {
