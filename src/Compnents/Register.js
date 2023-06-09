@@ -15,7 +15,7 @@ const RegisterPage = () => {
       return;
     }
     try {
-      const res = await axios.post("http://localhost:9000/register", { email, password });
+      const res = await axios.post("https://contact-manager-backend-phlc.onrender.com/register", { email, password });
       console.log(res.data);
       alert('Registered Successfully');
       setEmail("");

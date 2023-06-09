@@ -15,7 +15,7 @@ const Login = () => {
   },
   onSubmit:async (values)=>{
       try {
-      const login= await axios.post("http://localhost:9000/login",values);
+      const login= await axios.post("https://contact-manager-backend-phlc.onrender.com/login",values);
       window.localStorage.setItem("token",login.data.token)
       navigate("/contactlist")
       } catch (error) {
