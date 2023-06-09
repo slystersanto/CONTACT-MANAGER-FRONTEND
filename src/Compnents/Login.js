@@ -17,7 +17,7 @@ const Login = () => {
       try {
       const login= await axios.post("https://contact-manager-backend-phlc.onrender.com/login",values);
       localStorage.setItem("token",login.data.token)
-      navigate("/contactlist")
+      navigate("/addcontact")
       } catch (error) {
           alert("Login failed")
           console.log(error);
