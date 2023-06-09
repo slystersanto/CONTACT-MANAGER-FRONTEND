@@ -31,7 +31,7 @@ const ContactList = () => {
       await axios.delete(`https://contact-manager-backend-phlc.onrender.com/user-delete/${contactid}`, {
         headers: {
           Authorization: `${localStorage.getItem("token")}`
-        }
+        },
       });
       const updatedUserList = userList.filter(user => user.id !== contactid);
       setUserlist(updatedUserList);

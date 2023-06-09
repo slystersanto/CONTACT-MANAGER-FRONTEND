@@ -29,7 +29,7 @@ const AddContact = () => {
         {
           headers: {
             Authorization: `${localStorage.getItem('token')}`
-          }
+          },
         }
       );
       console.log(response.data);
