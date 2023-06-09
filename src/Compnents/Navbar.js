@@ -7,7 +7,7 @@ const Navbar = () => {
     <React.Fragment>
      <nav className='navbar navbar-dark bg-dark navar-expand-sm'>
       <div className='container'>
-        <Link to='/contactlist' className='navbar-brand'>
+        <Link to='/addcontact' className='navbar-brand'>
         <i className='bx bx-mobile text-warning'/>Contact <span className='text-warning'> Manager</span></Link>
 
       </div>
