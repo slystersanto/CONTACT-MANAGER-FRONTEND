@@ -16,7 +16,7 @@ const App = () => {
      
       <Navbar />
       <Routes>
-  <Route path={"/"} element={<Navigate to={"/login"}/>}/>
+  <Route path={"/"} element={<Navigate to={"/contactlist"}/>}/>
   <Route path={"/contactlist"} element={<ContactList />} />
   <Route path={"/addcontact"} element={<AddContact />} />
   <Route path={"/viewcontact/:contactId"} element={<ViewContact />} />
