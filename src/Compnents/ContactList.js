@@ -28,11 +28,9 @@ const ContactList = () => {
   const handleDelete = async (contactid) => {
     try {
       setLoading(true);
-      await axios.delete(`https://contact-manager-backend-phlc.onrender.com/user-delete/${contactid}`, {
-        headers: {
-          Authorization: `${localStorage.getItem("token")}`
-        },
-      });
+      await axios.delete(`https://contact-manager-backend-phlc.onrender.com/user-delete/${contactid}`)
+       
+     
       const updatedUserList = userList.filter(user => user.id !== contactid);
       setUserlist(updatedUserList);
       setLoading(false);
