@@ -36,6 +36,7 @@ const Login = () => {
             type="email"
             id="email"
             name="email"
+            placeholder='admin@gmail.com'
             value={formik.values.email}
             onChange={formik.handleChange}
             required
@@ -46,6 +47,7 @@ const Login = () => {
             type="password"
             id="password"
             name="password"
+            placeholder='123456'
             value={formik.values.password}
             onChange={formik.handleChange}
             required
